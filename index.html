@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,35 +24,28 @@
                     <li><a href="#">contactos</a></li>
                 </ul>
             </nav>
-            <div>
-                <ul> 
-                    <li class="submenu">
-                        <img src="fotos/car.svg" id="img-carrito" alt="carrito">
-                        <div id="carrito">
-                            <table id="carrito">
-                                <thead id="lista-carrito">
-                                    <tr>
-                                        <th>Imagen</th>
-                                        <th>nombre</th>
-                                        <th>precio</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                        </div>
-                    </li>
-                </ul>
+            <div class="cart-container">
+                <div class="cart-icon">
+                    <img src="fotos/car.svg" id="cart-btn" alt="carrito">
+                    <span id="cart-counter">0</span>
+                </div>
+                <div id="cart-items" class="cart-items">
+                    <h3>Carrito de Compras</h3>
+                    <div id="cart-products"></div>
+                    <div class="cart-total">
+                        <span>Total: </span>
+                        <span id="cart-total">0€</span>
+                    </div>
+                    <button id="clear-cart" class="btn-2">Vaciar Carrito</button>
+                </div>
             </div>
         </div> 
 
         <div class="heder-content container">
-            <div class="heder-img"> 
-                <img src="fotos/images.jpg" alt="">
-            </div>
+            
             <div class="header-txt">
                 <h1>Nuevas ofertas</h1>
-                <p>Estrena el mejor material de esqui</p>
+                <p>Encuentra el mejor material de esqui</p>
                 <a href="#" class="btn-1">informacion</a>
             </div>
         </div>
@@ -100,93 +94,68 @@
     </section>
 
     <main class="products container" id="lista-1">
-
-        <h2>Productos</h2>
-
+        <h2>PRODUCTOS</h2>
         <div class="product-content">
-                <div class="product">
-                <img src="fotos/5tabla.webp" alt="">
+            <div class="product">
+                <img src="fotos/5tabla.webp" alt="Tabla de snowboard">
                 <div class="product-txt">
-                    <h3>nombre tabla</h3>
+                    <h3>NOMBRE TABLA</h3>
                     <p>calidad premium</p>
                     <p class="precio">300€</p>
                     <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
                 </div>
             </div>
 
-            <div class="product-content">
-                <div class="product">
-                    <img src="fotos/5tabla.webp" alt="">
-                    <div class="product-txt">
-                        <h3>nombre tabla</h3>
-                        <p>calidad premium</p>
-                        <p class="precio">300€</p>
-                        <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
-                    </div>
+            <div class="product">
+                <img src="fotos/5tabla.webp" alt="Tabla de snowboard">
+                <div class="product-txt">
+                    <h3>NOMBRE TABLA</h3>
+                    <p>calidad premium</p>
+                    <p class="precio">300€</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
                 </div>
             </div>
 
-            <div class="product-content">
-                <div class="product">
-                    <img src="fotos/5tabla.webp" alt="">
-                    <div class="product-txt">
-                        <h3>nombre tabla</h3>
-                        <p>calidad premium</p>
-                        <p class="precio">300€</p>
-                        <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
-                    </div>
+            <div class="product">
+                <img src="fotos/5tabla.webp" alt="Tabla de snowboard">
+                <div class="product-txt">
+                    <h3>NOMBRE TABLA</h3>
+                    <p>calidad premium</p>
+                    <p class="precio">300€</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
                 </div>
             </div>
 
-            <div class="product-content">
-                <div class="product">
-                    <img src="fotos/5tabla.webp" alt="">
-                    <div class="product-txt">
-                        <h3>nombre tabla</h3>
-                        <p>calidad premium</p>
-                        <p class="precio">300€</p>
-                        <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
-                    </div>
+            <div class="product">
+                <img src="fotos/5tabla.webp" alt="Tabla de snowboard">
+                <div class="product-txt">
+                    <h3>NOMBRE TABLA</h3>
+                    <p>calidad premium</p>
+                    <p class="precio">300€</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
                 </div>
             </div>
 
-            <div class="product-content">
-                <div class="product">
-                    <img src="fotos/5tabla.webp" alt="">
-                    <div class="product-txt">
-                        <h3>nombre tabla</h3>
-                        <p>calidad premium</p>
-                        <p class="precio">300€</p>
-                        <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
-                    </div>
+            <div class="product">
+                <img src="fotos/5tabla.webp" alt="Tabla de snowboard">
+                <div class="product-txt">
+                    <h3>NOMBRE TABLA</h3>
+                    <p>calidad premium</p>
+                    <p class="precio">300€</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
                 </div>
             </div>
 
-            <div class="product-content">
-                <div class="product">
-                    <img src="fotos/5tabla.webp" alt="">
-                    <div class="product-txt">
-                        <h3>nombre tabla</h3>
-                        <p>calidad premium</p>
-                        <p class="precio">300€</p>
-                        <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-content">
-                <div class="product">
-                    <img src="fotos/5tabla.webp" alt="">
-                    <div class="product-txt">
-                        <h3>nombre tabla</h3>
-                        <p>calidad premium</p>
-                        <p class="precio">300€</p>
-                        <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar al carrito</a>
-                    </div>
+            <div class="product">
+                <img src="fotos/5tabla.webp" alt="Tabla de snowboard">
+                <div class="product-txt">
+                    <h3>NOMBRE TABLA</h3>
+                    <p>calidad premium</p>
+                    <p class="precio">300€</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
                 </div>
             </div>
         </div>
-
     </main>
 
     <section class="icons container">
@@ -299,8 +268,6 @@
 
     </footer>
 
-
-
-    <script src="scrip.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

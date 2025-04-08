@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 /*
@@ -74,45 +75,81 @@ img {
     display: none;
 }
 
-.submenu {
+.cart-container {
     position: relative;
 }
 
-.submenu #carrito {
-    display: none;
-}
-
-.submenu:hover #carrito {
-    display: block;
-    position: absolute;
-    right: 0;
-    backdrop-filter: blur(10px);
-    top: 100%;
-    z-index: 1;
-    background-color: #4E4B5076;
-    padding: 20px;
-    min-width: 400px;
-}
-
-table {
-    width: 100%;
-}
-
-th, td {
-    color: #ffffff;
-}
-
-.borrar {
-    background-color: #111111;
-    border-radius: 5%;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 800;
+.cart-icon {
+    position: relative;
     cursor: pointer;
 }
 
-.header-content  {
+#cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.cart-items {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 20px;
+    min-width: 300px;
+    z-index: 1000;
+}
+
+.cart-items.active {
+    display: block;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-product img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cart-product-info {
+    flex-grow: 1;
+}
+
+.cart-product-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.cart-product-price {
+    font-weight: bold;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.remove-product {
+    color: #ff0000;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,6 +186,7 @@ th, td {
     display: inline-block;
     padding: 11px 25px;
     background-color: #111111;
+    color: #ffffff;
     border-radius: 5px;
 }
 
@@ -213,7 +251,8 @@ th, td {
 .product-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    gap: 30px;
+    padding: 0 20px;
 }
 
 .product {
@@ -223,20 +262,22 @@ th, td {
 }
 
 .product img {
-    width: 250px;
+    width: 100px;
     height: 370px;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .product h3 {
     font-size: 20px;
     color: #111111;
-    font-family: 'Oswald',sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
-.product p, .percio {
+.product p,
+.percio {
     font-size: 16px;
     color: #111111;
     margin-bottom: 15px;
@@ -245,13 +286,13 @@ th, td {
 .percio {
     font-weight: 800;
 }
- 
+
 .icons {
     padding: 50px 0 100px 0;
     display: flex;
     justify-content: space-between;
 }
- 
+
 .icon-1 {
     flex-basis: calc(33.3% -30px);
     display: flex;
@@ -264,7 +305,7 @@ th, td {
 .icon-txt h3 {
     font-size: 20px;
     color: #111111;
-    font-family: 'Oswald',sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
 }
 
@@ -303,7 +344,7 @@ th, td {
 .footer {
     padding: 50px 0;
     background-color: #111111;
-} 
+}
 
 .footer-content {
     display: flex;
@@ -313,7 +354,7 @@ th, td {
 .link h3 {
     font-size: 18px;
     color: #ffffff;
-    font-family: 'Oswald',sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -329,7 +370,7 @@ th, td {
     .menu {
         padding: 20px;
     }
-    
+
     .menu label {
         position: absolute;
         top: 100%;
@@ -347,16 +388,16 @@ th, td {
         color: #ffffff;
     }
 
-    #menu:checked ~ .navbar {
+    #menu:checked~.navbar {
         display: initial;
     }
 
     .logo {
         display: none;
     }
-    
+
     .submenu:hover #carrito {
-        min-width: 100%;    
+        min-width: 100%;
     }
 
     .header {
@@ -376,18 +417,20 @@ th, td {
     .header-txt h1 {
         font-size: 70px;
     }
+
     .ofert {
         padding: 30px 30px 0 30px;
         flex-direction: column;
     }
+
     .ofert-1 {
         margin-bottom: 30px;
     }
-    
+
     .products {
         padding: 0 30px 30px 30px;
     }
-    
+
     .products h2 {
         margin-bottom: 30px;
     }
@@ -410,7 +453,7 @@ th, td {
     .icon-1 {
         margin-bottom: 30px;
     }
-     
+
     .blog {
         padding: 0 30px 30px 30px;
         flex-direction: column;
@@ -429,4 +472,3 @@ th, td {
         text-align: center;
     }
 }
-
